@@ -1,2 +1,2 @@
-# TEMA-GABUT-V
+# TEMA TERMUX
 Untuk tema termux
