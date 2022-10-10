@@ -1,0 +1,98 @@
+#!/data/data/com.termux/usr/bin/bash
+pkg install figlet -y
+pkg install neofetch -y
+blue="\033[34;1m"
+green="\033[32;1m"
+purple="\033[35;1m"
+cyan="\033[36;1m"
+red="\033[31;1m"
+putih="\033[97;1m"
+kuning="\033[93;1m"
+clear
+echo -e $putih
+read -p 'What Is Your Name: ' name
+sleep 2
+clear
+echo -e $red'''
+╔═╗╦ ╦╔╗ ╔═╗╔═╗╦═╗╦╔╗ ╔═╗  ╔╦╗╦  ╦ ╦  ╔╗╔╔═╗╔═╗╔╗ 
+╚═╗║ ║╠╩╗╚═╗║  ╠╦╝║╠╩╗║╣    ║║║  ║ ║  ║║║║ ╦╠═╣╠╩╗
+╚═╝╚═╝╚═╝╚═╝╚═╝╩╚═╩╚═╝╚═╝  ═╩╝╩═╝╚═╝  ╝╚╝╚═╝╩ ╩╚═╝
+'''
+sleep 1
+xdg-open https://youtube.com/channel/UCJdVJDRUImyBoEp_jdvJAvQ
+clear
+sleep 2
+echo -e
+echo -e $putih'╔═══════════════════════════════════════'$red'•'$putih $name $red'•'$putih'═══════════════════════════════════════╗'
+echo -e $red'      ╔╦╗╔═╗╔╦╗╔═╗  ╔╦╗╔═╗╦═╗╔╦╗╦ ╦═╗ ╦ '  $putih'         Created By Pick Ford'
+echo -e $red'       ║ ║╣ ║║║╠═╣   ║ ║╣ ╠╦╝║║║║ ║╔╩╦╝'   $putih'       Thaks To My Team Dark Club'
+echo -e $putih'       ╩ ╚═╝╩ ╩╩ ╩   ╩ ╚═╝╩╚═╩ ╩╚═╝╩ ╚═' $red'         My Github : PICKFORD-DC'        
+echo -e $putih'╚═══════════════════════════════════════'$red'•'$putih $name $red'•'$putih'═══════════════════════════════════════╝'
+echo -e $putih'Punya Neofetch?' 
+read -p 'Neofetch: ' p
+cd $HOME
+cd ..
+cd usr
+cd etc
+rm bash.bashrc
+cat <<TEMA>bash.bashrc
+if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-found ]; then
+        command_not_found_handle() {
+                /data/data/com.termux/files/usr/libexec/termux/command-not-found ""
+        }
+fi
+
+clear
+$p
+nifce=
+
+
+r='\[\e[1;31m\]'
+g='\[\e[1;32m\]'
+y='\[\e[1;33m\]'
+b='\[\e[1;34m\]'
+p='\[\e[1;35m\]'
+c='\[\e[1;36m\]'
+w='\[\e[1;37m\]'
+
+# simple kali prompt
+PS1='\033[1;34m\]╭\[\033[1;33m\]•\[\033[1;31m\]\[\033[1;32m\]\@\[\033[1;33m\]•\033[1;34m\]───\[\033[1;33m\]•\[\033[1;32m\]TERMUX\[\033[1;33m\]•\033[1;34m\]───\[\033[1;33m\]•\[\033[1;32m\][ \w ]
+\[\033[1;34m\]╰──╼\[\033[1;31m\]>>>\[\033[1;32m\] '
+# 2nd prompt
+#PS1="\n╔═[ \@ ] [ \V ] [  ] [ \W ] [ \j ]\n║ \n╚═[ th3unkn0n ] >> "
+
+# corsor and it's color
+echo -e '\e[3 q'
+echo -ne "\033]12;#00ff00\007"
+
+TEMA
+echo -e $green"SUCCESS" $putih"DONT FORGET TURU 🗿"
+exit
+else
+#ini else yee
+clear
+neofetch 
+nifce=
+
+
+r='\[\e[1;31m\]'
+g='\[\e[1;32m\]'
+y='\[\e[1;33m\]'
+b='\[\e[1;34m\]'
+p='\[\e[1;35m\]'
+c='\[\e[1;36m\]'
+w='\[\e[1;37m\]'
+
+# simple kali prompt
+PS1='\033[1;34m\]╭\[\033[1;33m\]•\[\033[1;31m\]\[\033[1;32m\] \@ \033[1;34m\]──────\[\033[1;33m\]•\[\033[1;32m\]TERMUX\033[1;34m\]──────\[\033[1;33m\]•\[\033[1;32m\][ \w ]
+\[\033[1;34m\]╰──╼\[\033[1;31m\]\[\033[1;33m\]•>\[\033[1;32m\]'
+# 2nd prompt
+#PS1="\n╔═[ \@ ] [ \V ] [  ] [ \W ] [ \j ]\n║ \n╚═[ th3unkn0n ] >> "
+
+# corsor and it's color
+echo -e '\e[3 q'
+echo -ne "\033]12;#00ff00\007"
+
+TEMA
+echo -e "SUCCESS DONT FORGET TURU"
+fi
